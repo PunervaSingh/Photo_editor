@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>DSUC Project</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<style>
+		html,
+		body {
+			height: 100%;
+			font-family: sans-serif;
+		}
+
+		.text_box {
+			margin-top: 50px;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+		}
+
+		#container {
+			width: 100%;
+			background-color: white;
+			/* display: flex; */
+			margin: 0 auto;
+		}
+
+		.center_buttons {
+			margin: auto;
+			display: block;
+		}
+
+		#imageEditor {
+			margin: auto;
+			padding: 20px;
+			border: 1px solid #4b4b4b;
+			-moz-border-radius: 8px;
+			-webkit-border-radius: 8px;
+			border-radius: 8px;
+			background-color: #c2c2c2;
+		}
+
+		#editorContainer {
+			display: block;
+			overflow: auto;
+			width: 800px;
+			height: 450px;
+		}
+
+		#editor {
+			display: block;
+			margin: auto;
+		}
+
+		#toolbar {
+			display: flex;
+			margin: 40px 170px 0 170px;
+		}
+
+		#resizer {
+			border: 2px dashed #000
+		}
+
+		#toolbar button {
+			padding: 10px 20px 10px 20px;
+			margin: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h2 style="text-align: center; padding-top: 20px;">Photo Editor</h2>
+	<div id="container">
+		<div class="text_box">
+			<div id="imageEditor">
+				<section id="editorContainer">
+					<canvas id="editor"></canvas>
+				</section>
+			</div>
+			<section id="toolbar">
+				<button id="upload" class="btn btn-dark" title="Upload">
+					Upload
+				</button>
+				<button id="save" class="btn btn-success" title="Save">
+					Save
+				</button>
+				<button id="flipHor" class="btn btn-primary" title="Flip Horizontally">
+					Flip Horizontally
+				</button>
+				<button id="flipVert" class="btn btn-primary" title="Flip vertically">
+					Flip vertically
+				</button>
+				<button id="rotateL" class="btn btn-primary" title="Rotate left">
+					Rotate Left
+				</button>
+				<button id="rotateR" class="btn btn-primary" title="Rotate right">
+					Rotate Right
+				</button>
+				<button id="greyscale" class="btn btn-primary" title="Convert to grayscale">
+					Grayscale
+				</button>
+			</section>
+		</div>
+	</div>
+	<script src="function.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
