@@ -11,7 +11,7 @@ onload = function () {
             upload.onchange = function () {
                 const img = new Image();
                 img.onload = () => {
-                    editor.width = img.width;
+                    editor.width = img.width; 
                     editor.height = img.height;
                     context.drawImage(img, 0, 0);
                 };
@@ -31,20 +31,6 @@ onload = function () {
         },
         "flipHor": function () {
             let cols = editor.width; 
-            let rows = editor.height;
-            let image = getRGBArray(rows, cols);
-
-            for (let i = 0; i < Math.floor(rows / 2); i++) {
-                for (let j = 0; j < cols; j++) {
-                    let tmp = image[i][j];
-                    image[i][j] = image[rows - 1 - i][j];
-                    image[rows - 1 - i][j] = tmp;
-                }
-            }
-            setImageData(image, rows, cols);
-        },
-        "flipVert": function () {
-            let cols = editor.width; 
             let rows = editor.height; 
             let image = getRGBArray(rows, cols);
 
@@ -53,6 +39,20 @@ onload = function () {
                     let tmp = image[i][j];
                     image[i][j] = image[i][cols - 1 - j];
                     image[i][cols - 1 - j] = tmp;
+                }
+            }
+            setImageData(image, rows, cols);
+        },
+        "flipVert": function () {
+            let cols = editor.width; 
+            let rows = editor.height;
+            let image = getRGBArray(rows, cols);
+
+            for (let i = 0; i < Math.floor(rows / 2); i++) {
+                for (let j = 0; j < cols; j++) {
+                    let tmp = image[i][j];
+                    image[i][j] = image[rows - 1 - i][j];
+                    image[rows - 1 - i][j] = tmp;
                 }
             }
             setImageData(image, rows, cols);

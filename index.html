@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>DSUC Project</title>
+	<title>PixEd - DSUC Project</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<style>
 		html,
@@ -56,8 +56,8 @@
 		}
 
 		#toolbar {
-			display: flex;
-			margin: 40px 170px 0 170px;
+			/* display: flex; */
+			margin: 40px 10%;
 		}
 
 		#resizer {
@@ -68,11 +68,19 @@
 			padding: 10px 20px 10px 20px;
 			margin: 20px;
 		}
+		@media only screen and (max-width: 800px){
+			#imageEditor{
+				width: 100%;
+			}
+			#editorContainer {
+				width: 100%;
+			}
+		}
 	</style>
 </head>
 
 <body>
-	<h2 style="text-align: center; padding-top: 20px;">Photo Editor</h2>
+	<h2 style="text-align: center; padding-top: 20px;">PixEd - Photo Editor</h2>
 	<div id="container">
 		<div class="text_box">
 			<div id="imageEditor">
